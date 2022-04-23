@@ -371,7 +371,8 @@ kubeadm init --config /etc/kubernetes/aws.yaml --ignore-preflight-errors=NumCPU
 
 After cluster init, you'll get **unique token** for worker node join:
 
-kubeadm join **10.0.0.119:6443** --token **i4pna1.8tlp6kcmukr5sian** --discovery-token-ca-cert-hash **sha256:c2974f5f46e06df9bddd532ac61617ada82943b09ee914847fd8f15f7b8ff008**
+kubeadm join 172.31.32.159:6443 --token m9ir7b.90gxvdscspr6guj5 \
+--discovery-token-ca-cert-hash sha256:35a8470a97a9ac47c77fc7c7ff85d66071ee6d91edca66b667b9043a18f26fbd
 
 save it, we'll use later in worker node
 
