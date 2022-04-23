@@ -382,8 +382,8 @@ mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
-# install Flannel CNI
-kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+# install Calico CNI
+ kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
 
 kubectl get nodes
 
@@ -447,12 +447,12 @@ apiVersion: kubeadm.k8s.io/v1beta1
 kind: JoinConfiguration
 discovery:
   bootstrapToken:
-    token: "i4pna1.8tlp6kcmukr5sian"
-    apiServerEndpoint: "10.0.0.119:6443"
+    token: "m9ir7b.90gxvdscspr6guj5"
+    apiServerEndpoint: "172.31.32.159:6443"
     caCertHashes:
-      - "sha256:c2974f5f46e06df9bddd532ac61617ada82943b09ee914847fd8f15f7b8ff008"
+      - "sha256:35a8470a97a9ac47c77fc7c7ff85d66071ee6d91edca66b667b9043a18f26fbd"
 nodeRegistration:
-  name: ip-10-0-0-186.eu-west-3.compute.internal
+  name: ip-172-31-40-60.us-west-2.compute.internal
   kubeletExtraArgs:
     cloud-provider: aws
 EOF
