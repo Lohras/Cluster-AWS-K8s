@@ -215,8 +215,6 @@ Policy Name : **k8s-cluster-iam-worker-policy**
 Then go to **Roles** create new role with EC2 type
 Search created policy (**k8s-cluster-iam-worker-policy**)
 
-***RESTART BOTH MASTER AND WORKER NODES****
-
 Role Name: **k8s-cluster-iam-worker-role**
 
 
@@ -302,6 +300,8 @@ Custom TCP | TCP | 30000-32767 | 0.0.0.0/0 | NodePort Services
 All Traffic | All | All | 10.0.0.0/16 | VPC subnet
 
 Review all changes then **Launch**
+
+***RESTART BOTH MASTER AND WORKER NODES****
 
 # Config Kubernetes Cluster
 ## Master Node Setup
