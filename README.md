@@ -215,6 +215,8 @@ Policy Name : **k8s-cluster-iam-worker-policy**
 Then go to **Roles** create new role with EC2 type
 Search created policy (**k8s-cluster-iam-worker-policy**)
 
+***RESTART BOTH MASTER AND WORKER NODES****
+
 Role Name: **k8s-cluster-iam-worker-role**
 
 
